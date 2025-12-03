@@ -3,43 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GARAGE #1 — Премиум-детейлинг</title>
+  <title>GARAGE #1 — Премиум-детейлинг для авто и мото</title>
+  <meta name="description" content="Профессиональный уход за премиальными автомобилями и мотоциклами. Керамика, полировка, интерьер — только лучшее.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --black: #000;
       --red: #C40000;
-      --dark: #0a0a0a;
+      --dark-bg: #0a0a0a;
       --text: #e0e0e0;
-      --card: #1a1a1a;
+      --card-bg: #1a1a1a;
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      background: var(--dark) url('https://images.pexels.com/photos/13232926/pexels-photo-13232926.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1') center/cover fixed;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--dark-bg);
       color: var(--text);
-      min-height: 100vh;
+      line-height: 1.6;
       padding-top: 180px;
       position: relative;
     }
 
-    /* Арочное меню */
+    /* === АРКА МЕНЮ === */
     .arc-menu {
       position: fixed;
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      width: 500px;
+      width: 520px;
       height: 200px;
       z-index: 1000;
     }
 
-    .arc-menu__item {
+    .arc-menu a {
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -47,158 +49,210 @@
       height: 80px;
       margin-left: -40px;
       border-radius: 50%;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(10, 10, 10, 0.85);
       border: 2px solid var(--red);
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
       color: var(--text);
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       transition: all 0.3s ease;
+      font-family: 'Barlow Condensed', sans-serif;
     }
 
-    .arc-menu__item:hover {
+    .arc-menu a:hover {
       background: var(--red);
       color: white;
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
 
-    /* Позиции кнопок по дуге */
-    .arc-menu__item:nth-child(1) { transform: translateX(-200px) rotate(20deg); }
-    .arc-menu__item:nth-child(2) { transform: translateX(-100px) rotate(10deg); }
-    .arc-menu__item:nth-child(3) { transform: translateX(0); font-weight: bold; }
-    .arc-menu__item:nth-child(4) { transform: translateX(100px) rotate(-10deg); }
-    .arc-menu__item:nth-child(5) { transform: translateX(200px) rotate(-20deg); }
+    /* Позиционирование кнопок по дуге */
+    .arc-menu a:nth-child(1) { transform: translateX(-200px) rotate(20deg); }
+    .arc-menu a:nth-child(2) { transform: translateX(-100px) rotate(10deg); }
+    .arc-menu a:nth-child(3) { transform: translateX(0); font-weight: bold; }
+    .arc-menu a:nth-child(4) { transform: translateX(100px) rotate(-10deg); }
+    .arc-menu a:nth-child(5) { transform: translateX(200px) rotate(-20deg); }
 
-    /* Центральный логотип */
+    /* Логотип в центре над аркой */
     .logo {
-      position: absolute;
-      top: 80px;
+      position: fixed;
+      top: 85px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 28px;
-      font-weight: bold;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       color: var(--text);
       z-index: 1001;
     }
     .logo span { color: var(--red); }
 
-    /* Контент */
-    main {
-      max-width: 800px;
+    .container {
+      width: 90%;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1.5rem;
-      text-align: center;
+      padding: 0 1rem;
     }
 
-    h1 {
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 4rem 0;
+    }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3.2rem;
       color: var(--red);
-      font-size: 2.5rem;
       margin-bottom: 1.5rem;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
     }
 
+    /* Buttons */
     .btn {
       display: inline-block;
       padding: 0.8rem 2rem;
-      background: var(--red);
-      color: white;
+      background: transparent;
+      color: var(--text);
+      border: 2px solid var(--red);
       text-decoration: none;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
-      border: none;
-      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: white;
+    }
+    .btn:hover {
+      background: var(--red);
+      color: white;
     }
 
-    .services {
-      margin-top: 3rem;
+    /* Sections */
+    .section {
+      padding: 4rem 0;
     }
-
-    .services h2 {
+    .section h2 {
+      text-align: center;
+      margin-bottom: 2.5rem;
       color: var(--red);
-      margin-bottom: 2rem;
+      font-family: 'Barlow Condensed', sans-serif;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .card-grid {
+    /* Services */
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
-
-    .card {
-      background: var(--card);
-      padding: 1.5rem;
+    .service-card {
+      background: var(--card-bg);
+      padding: 2rem;
+      text-align: center;
       border: 1px solid #333;
     }
-
-    .card h3 {
+    .service-card h3 {
       color: var(--red);
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
+      font-family: 'Barlow Condensed', sans-serif;
     }
 
+    /* Footer */
+    .footer {
+      background: var(--black);
+      padding: 2rem 0;
+      border-top: 1px solid var(--red);
+    }
+    .footer p {
+      text-align: center;
+      color: var(--text);
+    }
+
+    /* Mobile */
     @media (max-width: 600px) {
-      .arc-menu {
-        width: 360px;
-        height: 160px;
-      }
-      .arc-menu__item {
+      body { padding-top: 160px; }
+      .arc-menu { width: 360px; height: 160px; }
+      .arc-menu a {
         width: 60px;
         height: 60px;
-        font-size: 10px;
+        font-size: 9px;
       }
-      .arc-menu__item:nth-child(1) { transform: translateX(-140px) rotate(15deg); }
-      .arc-menu__item:nth-child(2) { transform: translateX(-70px) rotate(7deg); }
-      .arc-menu__item:nth-child(3) { transform: translateX(0); }
-      .arc-menu__item:nth-child(4) { transform: translateX(70px) rotate(-7deg); }
-      .arc-menu__item:nth-child(5) { transform: translateX(140px) rotate(-15deg); }
-      body { padding-top: 160px; }
-      .logo { top: 70px; font-size: 22px; }
+      .arc-menu a:nth-child(1) { transform: translateX(-140px) rotate(15deg); }
+      .arc-menu a:nth-child(2) { transform: translateX(-70px) rotate(7deg); }
+      .arc-menu a:nth-child(3) { transform: translateX(0); }
+      .arc-menu a:nth-child(4) { transform: translateX(70px) rotate(-7deg); }
+      .arc-menu a:nth-child(5) { transform: translateX(140px) rotate(-15deg); }
+      .logo { top: 75px; font-size: 26px; }
+      .hero h1 { font-size: 2.4rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Арочное меню -->
+  <!-- Арка меню -->
   <nav class="arc-menu">
-    <a href="#" class="arc-menu__item">Услуги</a>
-    <a href="#" class="arc-menu__item">Галерея</a>
-    <a href="#" class="arc-menu__item">Главная</a>
-    <a href="#" class="arc-menu__item">О нас</a>
-    <a href="#" class="arc-menu__item">Контакты</a>
+    <a href="services.html">Услуги</a>
+    <a href="gallery.html">Галерея</a>
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="contact.html">Контакты</a>
   </nav>
 
   <!-- Логотип по центру -->
   <div class="logo">GARAGE <span>#1</span></div>
 
   <!-- Основной контент -->
-  <main>
+  <div class="content-wrapper">
     <section class="hero">
-      <h1>Where Metal Meets Perfection</h1>
-      <p>Премиальный детейлинг для автомобилей и мотоциклов, достойных легенды.</p>
-      <a href="#" class="btn">Записаться</a>
-    </section>
-
-    <section class="services">
-      <h2>Наши услуги</h2>
-      <div class="card-grid">
-        <div class="card"><h3>Керамика</h3><p>Защита до 5 лет. Глубина блеска — как в первый день.</p></div>
-        <div class="card"><h3>Полировка</h3><p>Удаление царапин, восстановление ЛКП.</p></div>
-        <div class="card"><h3>Интерьер</h3><p>Детальный уход за кожей, алькантарой, пластиком.</p></div>
+      <div class="container">
+        <h1>Where Metal Meets Perfection</h1>
+        <p>Премиальный детейлинг для автомобилей и мотоциклов, достойных легенды.</p>
+        <a href="contact.html" class="btn btn-primary">Записаться</a>
       </div>
     </section>
-  </main>
+
+    <section class="section">
+      <div class="container">
+        <h2>Наши услуги</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Керамика</h3>
+            <p>Защита до 5 лет. Глубина блеска — как в первый день.</p>
+          </div>
+          <div class="service-card">
+            <h3>Полировка</h3>
+            <p>Удаление царапин, восстановление ЛКП.</p>
+          </div>
+          <div class="service-card">
+            <h3>Интерьер</h3>
+            <p>Детальный уход за кожей, алькантарой, пластиком.</p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="services.html" class="btn">Все услуги</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 GARAGE #1. Все права защищены.</p>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
