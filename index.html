@@ -5,254 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GARAGE #1 — Премиум-детейлинг для авто и мото</title>
   <meta name="description" content="Профессиональный уход за премиальными автомобилями и мотоциклами. Керамика, полировка, интерьер — только лучшее.">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --black: #000;
-      --red: #C40000;
-      --dark-bg: #0a0a0a;
-      --text: #e0e0e0;
-      --card-bg: #1a1a1a;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: var(--dark-bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding-top: 180px;
-      position: relative;
-    }
-
-    /* === АРКА МЕНЮ === */
-    .arc-menu {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 520px;
-      height: 200px;
-      z-index: 1000;
-    }
-
-    .arc-menu a {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 80px;
-      height: 80px;
-      margin-left: -40px;
-      border-radius: 50%;
-      background: rgba(10, 10, 10, 0.85);
-      border: 2px solid var(--red);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: var(--text);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      transition: all 0.3s ease;
-      font-family: 'Barlow Condensed', sans-serif;
-    }
-
-    .arc-menu a:hover {
-      background: var(--red);
-      color: white;
-      transform: scale(1.15);
-    }
-
-    /* Позиционирование кнопок по дуге */
-    .arc-menu a:nth-child(1) { transform: translateX(-200px) rotate(20deg); }
-    .arc-menu a:nth-child(2) { transform: translateX(-100px) rotate(10deg); }
-    .arc-menu a:nth-child(3) { transform: translateX(0); font-weight: bold; }
-    .arc-menu a:nth-child(4) { transform: translateX(100px) rotate(-10deg); }
-    .arc-menu a:nth-child(5) { transform: translateX(200px) rotate(-20deg); }
-
-    /* Логотип в центре над аркой */
-    .logo {
-      position: fixed;
-      top: 85px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 32px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text);
-      z-index: 1001;
-    }
-    .logo span { color: var(--red); }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 4rem 0;
-    }
-    .hero h1 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 3.2rem;
-      color: var(--red);
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 2rem;
-      background: transparent;
-      color: var(--text);
-      border: 2px solid var(--red);
-      text-decoration: none;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s;
-    }
-    .btn-primary {
-      background: var(--red);
-      color: white;
-    }
-    .btn:hover {
-      background: var(--red);
-      color: white;
-    }
-
-    /* Sections */
-    .section {
-      padding: 4rem 0;
-    }
-    .section h2 {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      color: var(--red);
-      font-family: 'Barlow Condensed', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* Services */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .service-card {
-      background: var(--card-bg);
-      padding: 2rem;
-      text-align: center;
-      border: 1px solid #333;
-    }
-    .service-card h3 {
-      color: var(--red);
-      margin-bottom: 1rem;
-      font-family: 'Barlow Condensed', sans-serif;
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--black);
-      padding: 2rem 0;
-      border-top: 1px solid var(--red);
-    }
-    .footer p {
-      text-align: center;
-      color: var(--text);
-    }
-
-    /* Mobile */
-    @media (max-width: 600px) {
-      body { padding-top: 160px; }
-      .arc-menu { width: 360px; height: 160px; }
-      .arc-menu a {
-        width: 60px;
-        height: 60px;
-        font-size: 9px;
-      }
-      .arc-menu a:nth-child(1) { transform: translateX(-140px) rotate(15deg); }
-      .arc-menu a:nth-child(2) { transform: translateX(-70px) rotate(7deg); }
-      .arc-menu a:nth-child(3) { transform: translateX(0); }
-      .arc-menu a:nth-child(4) { transform: translateX(70px) rotate(-7deg); }
-      .arc-menu a:nth-child(5) { transform: translateX(140px) rotate(-15deg); }
-      .logo { top: 75px; font-size: 26px; }
-      .hero h1 { font-size: 2.4rem; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed  :wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-  <!-- Арка меню -->
-  <nav class="arc-menu">
-    <a href="services.html">Услуги</a>
-    <a href="gallery.html">Галерея</a>
-    <a href="index.html">Главная</a>
-    <a href="about.html">О нас</a>
-    <a href="contact.html">Контакты</a>
-  </nav>
+  <!-- Параллакс-фон -->
+  <div class="parallax-container">
+    <div class="parallax-layer" id="parallaxBg"></div>
 
-  <!-- Логотип по центру -->
-  <div class="logo">GARAGE <span>#1</span></div>
+    <div class="content-wrapper">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <a href="index.html" class="logo">GARAGE <span>#1</span></a>
+          <nav class="nav">
+            <a href="services.html">Услуги</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="about.html">О нас</a>
+            <a href="contact.html">Контакты</a>
+          </nav>
+        </div>
+      </header>
 
-  <!-- Основной контент -->
-  <div class="content-wrapper">
-    <section class="hero">
-      <div class="container">
-        <h1>Where Metal Meets Perfection</h1>
-        <p>Премиальный детейлинг для автомобилей и мотоциклов, достойных легенды.</p>
-        <a href="contact.html" class="btn btn-primary">Записаться</a>
-      </div>
-    </section>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Where Metal Meets Perfection</h1>
+          <p>Премиальный детейлинг для автомобилей и мотоциклов, достойных легенды.</p>
+          <a href="contact.html" class="btn btn-primary">Записаться</a>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="container">
-        <h2>Наши услуги</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Керамика</h3>
-            <p>Защита до 5 лет. Глубина блеска — как в первый день.</p>
+      <!-- Services Preview -->
+      <section class="section">
+        <div class="container">
+          <h2>Наши услуги</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <h3>Керамика</h3>
+              <p>Защита до 5 лет. Глубина блеска — как в первый день.</p>
+            </div>
+            <div class="service-card">
+              <h3>Полировка</h3>
+              <p>Удаление царапин, восстановление ЛКП.</p>
+            </div>
+            <div class="service-card">
+              <h3>Интерьер</h3>
+              <p>Детальный уход за кожей, алькантарой, пластиком.</p>
+            </div>
           </div>
-          <div class="service-card">
-            <h3>Полировка</h3>
-            <p>Удаление царапин, восстановление ЛКП.</p>
-          </div>
-          <div class="service-card">
-            <h3>Интерьер</h3>
-            <p>Детальный уход за кожей, алькантарой, пластиком.</p>
+          <div style="text-align: center; margin-top: 2rem;">
+            <a href="services.html" class="btn">Все услуги</a>
           </div>
         </div>
-        <div style="text-align: center; margin-top: 2rem;">
-          <a href="services.html" class="btn">Все услуги</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 GARAGE #1. Все права защищены.</p>
-      </div>
-    </footer>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 GARAGE #1. Все права защищены.</p>
+        </div>
+      </footer>
+    </div>
   </div>
+
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
