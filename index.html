@@ -1,74 +1,415 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GARAGE #1 — Премиум-детейлинг для авто и мото</title>
-  <meta name="description" content="Профессиональный уход за премиальными автомобилями и мотоциклами. Керамика, полировка, интерьер — только лучшее.">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed  :wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Мета-теги для SEO -->
+    <title>Мойка и детейлинг "Гараж" - Профессиональный уход за автомобилем в Нижнем Новгороде</title>
+    <meta name="description" content="Мойка и детейлинг 'Гараж' в Нижнем Новгороде. Профессиональная мойка, полировка, химчистка салона, защитные покрытия. Премиум-уход за вашим авто. Записывайтесь онлайн!">
+    <meta name="keywords" content="мойка автомобилей, детейлинг, полировка кузова, химчистка салона, Нижний Новгород, защитное покрытие, керамика, нано-покрытие">
+    
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Мойка и детейлинг 'Гараж' - Профессиональный уход за авто">
+    <meta property="og:description" content="Премиум-услуги по детейлингу и мойке автомобилей в Нижнем Новгороде">
+    <meta property="og:image" content="https://alfat81.github.io/garage1/img/bg.jpg">
+    <meta property="og:url" content="https://alfat81.github.io/garage1/index.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Параллакс-фон -->
-  <div class="parallax-container">
-    <div class="parallax-layer" id="parallaxBg"></div>
-
-    <div class="content-wrapper">
-      <!-- Header -->
-      <header class="header">
+    <!-- Хедер -->
+    <header class="header">
         <div class="container">
-          <a href="index.html" class="logo">GARAGE <span>#1</span></a>
-          <nav class="nav">
-            <a href="services.html">Услуги</a>
-            <a href="gallery.html">Галерея</a>
-            <a href="about.html">О нас</a>
-            <a href="contact.html">Контакты</a>
-          </nav>
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="#"><span>Гараж</span> <small>мойка & детейлинг</small></a>
+                </div>
+                <nav class="nav">
+                    <a class="nav__link" href="#services">Услуги</a>
+                    <a class="nav__link" href="#about">Преимущества</a>
+                    <a class="nav__link" href="#contact">Контакты</a>
+                    <a class="nav__link phone-link" href="tel:+79991234567">
+                        <i class="fas fa-phone"></i> +7 (999) 123-45-67
+                    </a>
+                </nav>
+            </div>
         </div>
-      </header>
+    </header>
 
-      <!-- Hero -->
-      <section class="hero">
-        <div class="hero-content">
-          <h1>Where Metal Meets Perfection</h1>
-          <p>Премиальный детейлинг для автомобилей и мотоциклов, достойных легенды.</p>
-          <a href="contact.html" class="btn btn-primary">Записаться</a>
-        </div>
-      </section>
-
-      <!-- Services Preview -->
-      <section class="section">
+    <!-- Главный экран -->
+    <section class="intro">
         <div class="container">
-          <h2>Наши услуги</h2>
-          <div class="services-grid">
-            <div class="service-card">
-              <h3>Керамика</h3>
-              <p>Защита до 5 лет. Глубина блеска — как в первый день.</p>
+            <div class="intro__inner">
+                <h1 class="intro__title">Премиум-уход для вашего автомобиля</h1>
+                <p class="intro__subtitle">Мойка премиум-класса и профессиональный детейлинг в Нижнем Новгороде</p>
+                <a href="#contact" class="btn btn--red">Записаться онлайн</a>
             </div>
-            <div class="service-card">
-              <h3>Полировка</h3>
-              <p>Удаление царапин, восстановление ЛКП.</p>
-            </div>
-            <div class="service-card">
-              <h3>Интерьер</h3>
-              <p>Детальный уход за кожей, алькантарой, пластиком.</p>
-            </div>
-          </div>
-          <div style="text-align: center; margin-top: 2rem;">
-            <a href="services.html" class="btn">Все услуги</a>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Footer -->
-      <footer class="footer">
+    <!-- Услуги -->
+    <section id="services" class="section">
         <div class="container">
-          <p>&copy; 2025 GARAGE #1. Все права защищены.</p>
+            <header class="section__header">
+                <h2 class="section__title">Наши услуги</h2>
+                <p class="section__text">Полный спектр услуг по детейлингу и профессиональной мойке</p>
+            </header>
+            
+            <div class="services">
+                <div class="services__item">
+                    <img class="services__icon" src="img/service1.jpg" alt="Комплексная мойка">
+                    <h3 class="services__title">Комплексная мойка</h3>
+                    <p class="services__text">Полная наружная мойка с чисткой дисков, обработкой резины, сушка профессиональным феном</p>
+                    <span class="services__price">от 1200 ₽</span>
+                    <a href="#contact" class="services__link">Записаться</a>
+                </div>
+                
+                <div class="services__item">
+                    <img class="services__icon" src="img/service2.jpg" alt="Детейлинг-мойка">
+                    <h3 class="services__title">Детейлинг-мойка</h3>
+                    <p class="services__text">Глубокая очистка кузова, очистка порогов, дверей, обработка пластика, консервация резины</p>
+                    <span class="services__price">от 2500 ₽</span>
+                    <a href="#contact" class="services__link">Записаться</a>
+                </div>
+                
+                <div class="services__item">
+                    <img class="services__icon" src="img/service3.jpg" alt="Полировка кузова">
+                    <h3 class="services__title">Полировка кузова</h3>
+                    <p class="services__text">Восстановительная и защитная полировка, удаление царапин, харей, восстановление блеска</p>
+                    <span class="services__price">от 5000 ₽</span>
+                    <a href="#contact" class="services__link">Записаться</a>
+                </div>
+                
+                <div class="services__item">
+                    <img class="services__icon" src="img/service4.jpg" alt="Химчистка салона">
+                    <h3 class="services__title">Химчистка салона</h3>
+                    <p class="services__text">Глубокая чистка салона, ковров, сидений, потолка, пластиковых панелей, дезинфекция</p>
+                    <span class="services__price">от 4000 ₽</span>
+                    <a href="#contact" class="services__link">Записаться</a>
+                </div>
+                
+                <div class="services__item">
+                    <img class="services__icon" src="img/service5.jpg" alt="Защитное покрытие">
+                    <h3 class="services__title">Керамическое покрытие</h3>
+                    <p class="services__text">Нанесение керамики, нанопокрытия, защита от соли, грязи, УФ-лучей, гидрофобный эффект</p>
+                    <span class="services__price">от 15000 ₽</span>
+                    <a href="#contact" class="services__link">Записаться</a>
+                </div>
+                
+                <div class="services__item">
+                    <img class="services__icon" src="img/service6.jpg" alt="Уход за стеклами">
+                    <h3 class="services__title">Уход за стеклами</h3>
+                    <p class="services__text">Очистка и полировка стекол, нанесение гидрофобного покрытия, чистка фар и фонарей</p>
+                    <span class="services__price">от 2000 ₽</span>
+                    <a href="#contact" class="services__link">Записаться</a>
+                </div>
+            </div>
         </div>
-      </footer>
-    </div>
-  </div>
+    </section>
 
-  <script src="./assets/js/main.js"></script>
+    <!-- О нас / Преимущества -->
+    <section id="about" class="section section--gray">
+        <div class="container">
+            <header class="section__header">
+                <h2 class="section__title">Почему выбирают наш детейлинг</h2>
+                <p class="section__text">Мы уделяем внимание каждой детали</p>
+            </header>
+            
+            <div class="about">
+                <div class="about__item">
+                    <div class="about__icon">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <h3 class="about__title">Профессиональная химия</h3>
+                    <p class="about__text">Используем только профессиональные сертифицированные средства премиум-класса</p>
+                </div>
+                
+                <div class="about__item">
+                    <div class="about__icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="about__title">Ручная работа</h3>
+                    <p class="about__text">Ключевые этапы выполняются вручную для максимального качества и внимания к деталям</p>
+                </div>
+                
+                <div class="about__item">
+                    <div class="about__icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="about__title">Экономия времени</h3>
+                    <p class="about__text">Пока мы ухаживаем за вашим авто, вы можете отдохнуть в нашем комфортабельном lounge-зале</p>
+                </div>
+                
+                <div class="about__item">
+                    <div class="about__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="about__title">Защита и уход</h3>
+                    <p class="about__text">Не просто мойка, а комплексный уход и защита кузова, салона и лакокрасочного покрытия</p>
+                </div>
+                
+                <div class="about__item">
+                    <div class="about__icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="about__title">Опытные специалисты</h3>
+                    <p class="about__text">Наши мастера проходят регулярное обучение и имеют сертификаты по детейлингу</p>
+                </div>
+                
+                <div class="about__item">
+                    <div class="about__icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="about__title">Любые автомобили</h3>
+                    <p class="about__text">Обслуживаем все марки от компактных городских до премиальных и внедорожников</p>
+                </div>
+            </div>
+            
+            <!-- Дополнительный блок про процесс -->
+            <div class="process">
+                <h3>Как проходит детейлинг у нас:</h3>
+                <div class="process__steps">
+                    <div class="process__step">
+                        <span class="process__number">1</span>
+                        <h4>Диагностика</h4>
+                        <p>Оценка состояния авто, подбор процедур</p>
+                    </div>
+                    <div class="process__step">
+                        <span class="process__number">2</span>
+                        <h4>Предварительная мойка</h4>
+                        <p>Бережное удаление основной грязи</p>
+                    </div>
+                    <div class="process__step">
+                        <span class="process__number">3</span>
+                        <h4>Основная очистка</h4>
+                        <p>Детальная чистка каждой поверхности</p>
+                    </div>
+                    <div class="process__step">
+                        <span class="process__number">4</span>
+                        <h4>Полировка и защита</h4>
+                        <p>Восстановление и нанесение защитных покрытий</p>
+                    </div>
+                    <div class="process__step">
+                        <span class="process__number">5</span>
+                        <h4>Финальный осмотр</h4>
+                        <p>Контроль качества и сдача работы</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="section">
+        <div class="container">
+            <header class="section__header">
+                <h2 class="section__title">Контакты</h2>
+                <p class="section__text">Приезжайте к нам или свяжитесь любым удобным способом</p>
+            </header>
+            
+            <div class="contact">
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Адрес</h3>
+                            <p>Мотальный переулок, 8к5, Нижний Новгород, 603140</p>
+                            <a href="https://yandex.ru/maps/47/nizhny-novgorod/?ll=43.992595%2C56.329994&mode=search&oid=179116220450&ol=biz&z=17" 
+                               target="_blank" class="contact__link">Построить маршрут</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Часы работы</h3>
+                            <p>Пн-Пт: 9:00 - 20:00</p>
+                            <p>Сб-Вс: 10:00 - 18:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Телефон</h3>
+                            <p><a href="tel:+79991234567" class="contact__phone">+7 (999) 123-45-67</a></p>
+                            <p>Звоните или пишите в WhatsApp</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@garage1.club">info@garage1.club</a></p>
+                            <p>Для сотрудничества и вопросов</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <i class="fas fa-wifi"></i>
+                        <div>
+                            <h3>Дополнительно</h3>
+                            <p>Бесплатный Wi-Fi</p>
+                            <p>Кофе и lounge-зона для клиентов</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact__form">
+                    <h3>Записаться на детейлинг</h3>
+                    <p>Оставьте заявку и мы подберем для вас лучшее время</p>
+                    
+                    <form action="https://formsubmit.co/info@garage1.club" method="POST" class="form">
+                        <input type="hidden" name="_subject" value="Новая заявка на детейлинг с сайта Гараж">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://alfat81.github.io/garage1/thanks.html">
+                        
+                        <div class="form__group">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="tel" name="phone" placeholder="Номер телефона" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="text" name="car" placeholder="Марка и модель автомобиля">
+                        </div>
+                        
+                        <div class="form__group">
+                            <select name="service" required>
+                                <option value="" disabled selected>Выберите услугу</option>
+                                <option value="Комплексная мойка">Комплексная мойка (от 1200 ₽)</option>
+                                <option value="Детейлинг-мойка">Детейлинг-мойка (от 2500 ₽)</option>
+                                <option value="Полировка кузова">Полировка кузова (от 5000 ₽)</option>
+                                <option value="Химчистка салона">Химчистка салона (от 4000 ₽)</option>
+                                <option value="Керамическое покрытие">Керамическое покрытие (от 15000 ₽)</option>
+                                <option value="Уход за стеклами">Уход за стеклами (от 2000 ₽)</option>
+                                <option value="Комплексный детейлинг">Комплексный детейлинг</option>
+                                <option value="Консультация">Консультация мастера</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form__group">
+                            <textarea name="message" placeholder="Особые пожелания или проблема автомобиля"></textarea>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label>
+                                <input type="checkbox" name="newsletter" checked>
+                                Хочу получать информацию об акциях и скидках
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--red btn--block">Записаться на детейлинг</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Яндекс.Карта -->
+            <div class="map">
+                <h3>Мы на карте</h3>
+                <div id="map" style="width: 100%; height: 400px; border-radius: 10px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <div class="footer__logo">Гараж</div>
+                    <p>Профессиональная мойка и детейлинг<br>в Нижнем Новгороде</p>
+                    <div class="footer__social">
+                        <!-- Добавьте ссылки на соцсети -->
+                        <!--
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        -->
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Услуги</h4>
+                    <a href="#services">Комплексная мойка</a>
+                    <a href="#services">Детейлинг-мойка</a>
+                    <a href="#services">Полировка кузова</a>
+                    <a href="#services">Химчистка салона</a>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Мотальный пер., 8к5</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@garage1.club">info@garage1.club</a></p>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Часы работы</h4>
+                    <p>Пн-Пт: 9:00 - 20:00</p>
+                    <p>Сб-Вс: 10:00 - 18:00</p>
+                    <p>Без перерывов</p>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 Мойка и детейлинг "Гараж". Все права защищены.</p>
+                <p>Предварительная запись желательна</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script>
+        // Инициализация Яндекс.Карты
+        function initMap() {
+            // Координаты адреса (примерные, нужно уточнить)
+            var myMap = new ymaps.Map('map', {
+                center: [56.329994, 43.992595], // Широта, долгота
+                zoom: 17
+            });
+            
+            var myPlacemark = new ymaps.Placemark([56.329994, 43.992595], {
+                hintContent: 'Мойка и детейлинг "Гараж"',
+                balloonContent: 'Мотальный переулок, 8к5<br>Мойка и детейлинг'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        }
+        
+        // Загрузка API Яндекс.Карт
+        (function(){
+            var script = document.createElement('script');
+            script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMap';
+            document.head.appendChild(script);
+        })();
+        
+        // Простая анимация появления элементов при скролле
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+            
+            // Наблюдаем за элементами услуг
+            document.querySelectorAll('.services__item, .about__item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
